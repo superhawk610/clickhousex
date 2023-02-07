@@ -55,7 +55,7 @@ defmodule Clickhousex.HTTPClient do
   alias Clickhousex.Query
   @moduledoc false
 
-  @req_headers [{"Content-Type", "text/plain"}]
+  @req_headers [{"Content-Type", "text/plain"}, {"X-ClickHouse-Format", "JSONStrings"}]
 
   def connect(scheme, host, port) do
     Mint.HTTP.connect(scheme, host, port, mode: :passive)
